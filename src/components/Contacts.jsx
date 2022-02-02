@@ -1,4 +1,5 @@
 import React from "react";
+import Item from './Item'
 
 const Contacts = (props) => {
   return (
@@ -12,9 +13,16 @@ const Contacts = (props) => {
                 <div key={index}>
                   <div class="card mt-1 mb-1 text-center bg-primary">
                     <div class="card-body">
-                      <h5 className="text-white"><span className="text-secondary font-weight-bolder">Name:</span> {details.name}</h5>
+                    <Item
+                      key={index}
+                      details={details}
+                      editDetail={props.editDetail}
+                      deleteDetail={props.deleteDetail}
+                    />
+
+                      {/* <h5 className="text-white"><span className="text-secondary font-weight-bolder">Name:</span> {details.name}</h5>
                       <h5 className="text-white"><span className="text-warning font-weight-bolder">Phone Number:</span> {details.phone}</h5>
-                      <h5 className="text-white"><span className="text-success font-weight-bolder">Location:</span> {details.location}</h5>
+                      <h5 className="text-white"><span className="text-success font-weight-bolder">Location:</span> {details.location}</h5> */}
                     </div>
                   </div>
                 </div>
